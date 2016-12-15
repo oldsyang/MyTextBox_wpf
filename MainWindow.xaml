@@ -35,6 +35,27 @@
                             <Image Source="pack://application:,,,/MyTextBox;component/Images/search.png" Width="16" Height="16" Cursor="Hand" Margin="0,0,5,0"></Image>
                         </mywpf:MyTextBox.RightContent>
                     </mywpf:MyTextBox>
+                    <mywpf:MyTextBox  Mask="选择文件" FontSize="15"   IsFocusSelectAll="True">
+                        <mywpf:MyTextBox.RightContent>
+                            <mywpf:MyImageButton FontFamily="pack://application:,,,/MyTextBox;component/Resources/#myuifont"  Foreground="#f4ea2a" FontSize="20" Content="&#xe898;" VerticalAlignment="Center"
+                                                 mywpf:ControlAttachPropertyHepler.IsOpenFileButtonBehaviorEnabled="True" Command="mywpf:ControlAttachPropertyHepler.OpenFileCommand" 
+                                                 CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type TextBox}}}"></mywpf:MyImageButton>
+                        </mywpf:MyTextBox.RightContent>
+                    </mywpf:MyTextBox>
+                    <mywpf:MyTextBox  Mask="选择文件路径" FontSize="15"   IsFocusSelectAll="True">
+                        <mywpf:MyTextBox.RightContent>
+                            <mywpf:MyImageButton FontFamily="pack://application:,,,/MyTextBox;component/Resources/#myuifont"  Foreground="#f4ea2a" FontSize="20" Content="&#xe898;" VerticalAlignment="Center"
+                                                 mywpf:ControlAttachPropertyHepler.IsOpenFolderButtonBehaviorEnabled="True" Command="mywpf:ControlAttachPropertyHepler.OpenFolderCommand" 
+                                                 CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type TextBox}}}"></mywpf:MyImageButton>
+                        </mywpf:MyTextBox.RightContent>
+                    </mywpf:MyTextBox>
+                    <mywpf:MyTextBox  Mask="右侧有清除文本按钮" FontSize="15"   IsFocusSelectAll="True">
+                        <mywpf:MyTextBox.RightContent>
+                            <mywpf:MyImageButton FontFamily="pack://application:,,,/MyTextBox;component/Resources/#myuifont"  FontSize="20" Content="&#xe644;" VerticalAlignment="Center"
+                                                 mywpf:ControlAttachPropertyHepler.IsClearTextButtonBehaviorEnabled="True" Command="mywpf:ControlAttachPropertyHepler.ClearTextCommand" 
+                                                 CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type TextBox}}}"></mywpf:MyImageButton>
+                        </mywpf:MyTextBox.RightContent>
+                    </mywpf:MyTextBox>
                 </StackPanel>
             </GroupBox>
             <Rectangle Fill="#000000" Height="1" Width="{Binding RelativeSource={RelativeSource AncestorType=StackPanel},Path=ActualWidth}" Margin="0,10"></Rectangle>

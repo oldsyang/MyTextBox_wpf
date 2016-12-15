@@ -94,6 +94,7 @@
     </None>
     <AppDesigner Include="Properties\" />
     <None Include="README.md" />
+    <Resource Include="Resources\iconfont.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\search.png" />
