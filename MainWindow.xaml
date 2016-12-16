@@ -18,6 +18,7 @@
             <Style TargetType="mywpf:MyTextBox" BasedOn="{StaticResource {x:Type mywpf:MyTextBox}}">
                 <Setter Property="Height" Value="30"></Setter>
                 <Setter Property="Margin" Value="10"></Setter>
+                <Setter Property="FontSize" Value="15"></Setter>
                 <Setter Property="BorderBrush" Value="#000000"></Setter>
             </Style>
         </Grid.Resources>
@@ -56,11 +57,25 @@
                                                  CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type TextBox}}}"></mywpf:MyImageButton>
                         </mywpf:MyTextBox.RightContent>
                     </mywpf:MyTextBox>
+                    <mywpf:MyTextBox  Mask="输入用户名" FontSize="15"   IsFocusSelectAll="True">
+                        <mywpf:MyTextBox.LeftContent>
+                            <TextBlock FontFamily="pack://application:,,,/MyTextBox;component/Resources/#myuifont" Text="&#xe604;" Foreground="Gray" VerticalAlignment="Center" FontSize="20"></TextBlock>
+                        </mywpf:MyTextBox.LeftContent>
+                        <mywpf:MyTextBox.RightContent>
+                            <mywpf:MyImageButton FontFamily="pack://application:,,,/MyTextBox;component/Resources/#myuifont"  Foreground="Black" FontSize="20" Content="&#xe63f;" VerticalAlignment="Center"
+                                         Click="ButtonBase_OnClick"  VerticalContentAlignment="Center"></mywpf:MyImageButton>
+                        </mywpf:MyTextBox.RightContent>
+                    </mywpf:MyTextBox>
+           
                 </StackPanel>
             </GroupBox>
             <Rectangle Fill="#000000" Height="1" Width="{Binding RelativeSource={RelativeSource AncestorType=StackPanel},Path=ActualWidth}" Margin="0,10"></Rectangle>
             <GroupBox Header="普通TextBox(只能输入数字(10位))" Margin="10" BorderBrush="Green" BorderThickness="2">
-                <TextBox mywpf:TextDigitalHelper.Count="10"  mywpf:TextDigitalHelper.InputTextType="Digital"></TextBox>
+               <StackPanel>
+                    <TextBox mywpf:TextDigitalHelper.Count="10"  mywpf:TextDigitalHelper.InputTextType="Digital"></TextBox>
+                    <TextBox mywpf:TextDigitalHelper.Count="10"  mywpf:TextDigitalHelper.InputTextType="Digital" mywpf:ControlAttachPropertyHepler.Watermark="这是一水印文本"></TextBox>
+
+                </StackPanel>
 
             </GroupBox>
         </StackPanel>
