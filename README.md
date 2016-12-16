@@ -13,7 +13,7 @@
 * TextDigitalHelper 是一个附加属性类，控制输入类型，可应用到普通的TextBox上
 * ControlAttachPropertyHepler 是一个附加属性类（从网上的版本修改了很多），对网络图标字体进行了友好支持，详情看[MyWPFUIBaseDemo](https://github.com/y19890902q/MyWPFUIBaseDemo.git),以后会重点优化
 
-```
+```C#
  <Grid>
         <Grid.Resources>
             <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
